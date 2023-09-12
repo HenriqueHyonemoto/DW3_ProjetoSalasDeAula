@@ -6,7 +6,7 @@ create table IF NOT EXISTS salasdeaula (
     removido boolean,
 );
 
-insert into clientes values 
+insert into salasdeaula values 
     (default, 'Sala de Teatro', 'Bloco A', 40, false),
     (default, 'Sala de Desenho', 'Bloco B', 30, false)
     ON CONFLICT DO NOTHING;
