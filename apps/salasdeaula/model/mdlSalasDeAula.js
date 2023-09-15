@@ -37,7 +37,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
         )
       ).rowCount;
     } catch (error) {
-      msg = "[mdlsaladeaula|insertSalasDeAula] " + error.detail;
+      msg = "[mdlSalaDeAula|insertSalasDeAula] " + error.detail;
       linhasAfetadas = -1;
     }
   
@@ -67,7 +67,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
         )
       ).rowCount;
     } catch (error) {
-      msg = "[mdlSalasDeAula|updateSalasDeAula] " + error.detail;
+      msg = "[mdlSalaDeAula|updateSalasDeAula] " + error.detail;
       linhasAfetadas = -1;
     }
   
@@ -86,7 +86,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
       )
     ).rowCount;
   } catch (error) {
-    msg = "[mdlsaladeaula|Deletesaladeaula] " + error.detail;
+    msg = "[mdlSalaDeAula|Deletesaladeaula] " + error.detail;
     linhasAfetadas = -1;
   }
   
