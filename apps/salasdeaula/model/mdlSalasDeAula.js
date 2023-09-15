@@ -37,7 +37,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
         )
       ).rowCount;
     } catch (error) {
-      msg = "[mdlsaladeaula|insertsaladeaula] " + error.detail;
+      msg = "[mdlsaladeaula|insertSalasDeAula] " + error.detail;
       linhasAfetadas = -1;
     }
   
