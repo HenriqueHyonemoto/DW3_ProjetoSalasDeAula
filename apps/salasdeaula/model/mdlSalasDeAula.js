@@ -4,7 +4,7 @@ const getAllSalasDeAula = async () => {
   return (
     await db.query(
       "SELECT *" +
-        "FROM saladeaula where deleted = false ORDER BY nome ASC"
+        "FROM saladeaula where removido = false ORDER BY descricao ASC"
     )
   ).rows;
 };
@@ -13,7 +13,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
     return (
       await db.query(
         "SELECT *" +
-          "FROM saladeaula WHERE saladeaulaid = $1 and deleted = false ORDER BY nome ASC",
+          "FROM saladeaula WHERE saladeaulaid = $1 and removido = false ORDER BY descricao ASC",
         [saladeaulaIDPar]
       )
     ).rows;
@@ -81,7 +81,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
     try {
       linhasAfetadas = (
       await db.query(
-        "UPDATE saladeaula SET " + "deleted = true " + "WHERE saladeaulaid = $1",
+        "UPDATE saladeaula SET " + "removido = true " + "WHERE saladeaulaid = $1",
         [saladeaulaREGPar.saladeaulaid]
       )
     ).rowCount;
