@@ -1,3 +1,4 @@
+--drop table saladeaula
 CREATE TABLE IF NOT EXISTS saladeaula (
     saladeaulaid bigserial CONSTRAINT pk_saladeaula PRIMARY KEY,
     descricao VARCHAR(60),

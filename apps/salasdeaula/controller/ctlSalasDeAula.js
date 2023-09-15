@@ -18,7 +18,7 @@ const getAllSalasDeAula = (req, res) =>
   (async () => {
     //@ Atenção: aqui já começamos a utilizar a variável msg para retornar erros de banco de dados.
     const saladeaulaREG = request.body;  
-    //console.log("[insertSalasDeAulaCTL",saladeaulaREG)  
+    console.log("[insertSalasDeAulaCTL",saladeaulaREG)  
     let { msg, linhasAfetadas } = await mdlSalasDeAula.insertSalasDeAula(saladeaulaREG);    
     res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
   })();

@@ -21,13 +21,14 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
 
   const insertSalasDeAula = async (saladeaulaREGPar) => {
     //@ Atenção: variável de msg para retornar erros do banco de dados.
-    //console.log("[insertsaladeaula]",saladeaulaREGPar)
+    console.log("[insertsaladeaula]",saladeaulaREGPar)
     let linhasAfetadas;
     let msg = "ok";
     try {
       linhasAfetadas = (
         await db.query(
-          "INSERT INTO saladeaula " + "values(default, $1, $2, $3, $4",
+          "INSERT INTO saladeaula " + 
+          "values(default, $1, $2, $3, $4)",
           [
             saladeaulaREGPar.descricao,
             saladeaulaREGPar.localizacao,
@@ -37,7 +38,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
         )
       ).rowCount;
     } catch (error) {
-      msg = "[mdlSalaDeAula|insertSalasDeAula] " + error.detail;
+      msg = "[mdlSalasDeAula|insertSalasDeAula] " + error.detail;
       linhasAfetadas = -1;
     }
   
