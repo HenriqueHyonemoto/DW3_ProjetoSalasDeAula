@@ -55,7 +55,7 @@ const getSalasDeAulaByID = async (saladeaulaIDPar) => {
             "descricao = $2, " +
             "localizacao = $3, " +
             "capacidade = $4, " +
-            "removido = $5, " +
+            "removido = $5 " +
             "WHERE saladeaulaid = $1",
           [
             saladeaulaREGPar.saladeaulaid,
